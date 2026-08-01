@@ -4,7 +4,7 @@
 #include "util.hpp"
 
 int main(int argc, char** argv) {
-    std::string version_info = "v0.1.0\nGNU GPLv3 License\nCopyright (c) 2026 ESzPa";
+    std::string version_info = "v0.1.1\nGNU GPLv3 License\nCopyright (c) 2026 ESzPa";
     argparse::ArgumentParser program("spass", version_info);
 
     program.add_argument("-c", "--count")

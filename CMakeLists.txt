@@ -1,9 +1,16 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.20)
 project(
   SimplePassword
-  VERSION 0.1.0
+  VERSION 0.1.1
   LANGUAGES CXX
 )
+
+if(NOT CMAKE_CONFIGURATION_TYPES AND NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE
+      Release
+      CACHE STRING "Build type" FORCE
+  )
+endif()
 
 set(bin spass)
 
