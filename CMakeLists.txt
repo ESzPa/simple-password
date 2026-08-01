@@ -1,12 +1,14 @@
 cmake_minimum_required(VERSION 3.5)
-project(SimplePassword LANGUAGES CXX)
+project(
+  SimplePassword
+  VERSION 0.1.0
+  LANGUAGES CXX
+)
 
 set(bin spass)
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
-set(CMAKE_CXX_COMPILER clang++)
 
 set(GEN_DIR ${CMAKE_CURRENT_BINARY_DIR}/generated)
 file(MAKE_DIRECTORY ${GEN_DIR})
@@ -26,3 +28,5 @@ set(CXX_SOURCES ${CMAKE_SOURCE_DIR}/src/main.cpp ${CMAKE_SOURCE_DIR}/src/generat
 add_executable(${bin} ${CXX_SOURCES})
 
 target_include_directories(${bin} PRIVATE ${CMAKE_SOURCE_DIR}/include ${GEN_DIR})
+
+install(TARGETS ${bin} DESTINATION bin)
