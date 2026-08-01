@@ -51,7 +51,7 @@ int main(int argc, char** argv) {
     bool d = program.get<bool>("-d");
     bool s = program.get<bool>("-s");
 
-    bool w = program.get<bool>("-h");
+    bool w = program.get<bool>("-w");
 
     if(w && (l || u || d || s)) {
         std::cerr << "Unable to create a password: wrong arguments\n";
