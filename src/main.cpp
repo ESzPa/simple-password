@@ -5,7 +5,7 @@
 
 int main(int argc, char** argv) {
     std::string version_info = "v0.1.1\nGNU GPLv3 License\nCopyright (c) 2026 ESzPa";
-    argparse::ArgumentParser program("spass", version_info);
+    argparse::ArgumentParser program("simpass", version_info);
 
     program.add_argument("-c", "--count")
         .help("Count of elements in the password")
